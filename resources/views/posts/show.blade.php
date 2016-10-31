@@ -9,14 +9,14 @@
 			<h2> {{ $post->title }} </h2>
 			<small>{{ 'Created at' }} {{ date('M j, Y h:ia', strtotime($post->created_at)) }}</small>
 
-			<hr width="60%">
+			<hr width="100%">
 			<p class="lead">{{ $post->body }}</p>
 		</div>
 		<div class="col-md-4">
 			<div class="well">
 				<dl class="dl-horizontal">
 					<label>Url:</label>
-					<p><a href="{{ url($post->slug) }}">{{ url($post->slug) }}</a></p>
+					<p><a href="{{ route('blog.single', $post->slug) }}">{{ route('blog.single', $post->slug) }}</a></p>
 				</dl>
 				<dl class="dl-horizontal">
 					<label>Created At:</label>

@@ -9,29 +9,37 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/"> Laravel Blog </a>
+          <a class="navbar-brand" href="/"> <img src="/img/logos/logo.png" style="height: 60px;width: 60px; position: absolute;margin-left: 150px;top:-1px;" /></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
           <ul class="nav navbar-nav" >
-            <li class="{{ Request::is('/') ? "active" : " " }}"><a href="/">Home </a></li>
-            <li class="{{ Request::is('posts') ? "active" : " " }}"><a href="posts">Posts</a></li>
-            <li class="{{ Request::is('contact') ? "active" : " " }}"><a href="contact">Contact</a></li>
+            <li class="{{ Request::is('/') ? "active" : " " }}"><a href="/" style="margin-left: 200px;">Home</a></li>
+            <li class="{{ Request::is('blog') ? "active" : " " }}"><a href="/blog">Blog</a></li>
+            <li class="{{ Request::is('contact') ? "active" : " " }}"><a href="/contact">Contact</a></li>
             <li class="{{ Request::is('about') ? "active" : " " }}"><a href="/about">About</a></li>
           </ul>
           
           <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" > My Account <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="posts">All posts</a></li>
-                <li><a href="contact">Contact me</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="about">About</a></li>
-                <li><a href="#">Signout</a></li>
-              </ul>
-            </li>
+
+            @if (Auth::check())
+
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" > Hello {{ Auth::user()->name }}! <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="{{ route('posts.index') }}">Posts</a></li>
+                  <li><a href="contact">Contact me</a></li>
+                  <li><a href="about">About</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="{{ route('logout') }}">Logout</a></li>
+                </ul>
+              </li>
+
+            @else
+                <a href="{{ route('login') }}" class="btn btn-default " style="margin:8px 5px;">Login</a><br>
+            @endif
+
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->

@@ -6,9 +6,14 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Post;
 use Session;
+use App\Http\Controllers\Auth\AuthController;
 
 class PostController extends Controller
 {
+
+    public function __construct(){
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -36,7 +41,8 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+  
+     public function store(Request $request)
     {
         //validate the data
         $this->validate($request, array(
@@ -94,12 +100,19 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         // validate the data
-
-         $this->validate($request, array(
+        $post = Post::find($id);
+        if ($request->input('slug') == $post->slug) {      
+            $this->validate($request, array(
                 'title' => 'required|max:255',
-                'slug' => 'reqired|alpha_dash|min:5|max:255|unique:posts,slug',
                 'body' => 'required'
             ));
+        }else{
+            $this->validate($request, array(
+                'title' =>'required|max:255',
+                'slug' => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
+                'body' => 'required'
+            ));
+        }
 
         // save the data to DB
          $post = Post::find($id);

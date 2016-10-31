@@ -6,3 +6,14 @@
 .form-spacing-top{
 	margin-top:30px;
 }
+
+/* for buttons */
+.btn {
+	
+	font-size: 15px;
+}
+
+.btn-primary-read-more{
+	border: 2px solid red;
+	
+}
