@@ -14,7 +14,6 @@
 		<div class="col-md-12">
 			<div class="panel panel-default">
 
-				
 					<div class="row">
 						<div class="col-md-10 col-md-offset-1">
 							<div class="table-responsive">
@@ -47,14 +46,6 @@
 
 		</div> <!-- col md 12 -->
 	</div>
-		
-	
-
-	
-
-
-
-
 	<div class="div">
 		<div class="col-md-12">
 			<div class="div">

@@ -19,7 +19,8 @@
 				{{ Form::checkbox('remember') }}{{ Form::label('remember', ' &nbsp;&nbsp;Remember me')}}
 				<br>
 
-				{{ Form::submit('Login', ['class' => 'btn btn-primary form-spacing-top btn btn-block btn-lg'])}}
+				{{ Form::submit('Login', ['class' => 'btn btn-primary form-spacing-top btn btn-block btn-lg'])}} <br>
+				<p><a href="{{ url('password/reset')}}">Forgot password?</a></p>
 
 
 			{!! Form::close() !!}

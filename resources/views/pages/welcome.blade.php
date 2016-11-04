@@ -15,7 +15,8 @@
       
       <div class="row">
         <div class="col-md-8">
-
+          <h2>Latest posts</h2>
+          <hr width="100%">
           @foreach($posts as $post)
 
             <div class="post">
@@ -31,4 +32,14 @@
           <h2>Sidebar</h2>
         </div>
       </div>
+      
+      <nav aria-label="ASLFKALSJFLASK">
+        <ul class="pager">
+          <li><a href="#">Previous</a></li>
+          <li><a href="#">Next</a></li>
+        </ul>
+      </nav>
+      
+
+
 @endsection
