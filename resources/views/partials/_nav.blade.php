@@ -15,10 +15,10 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
           <ul class="nav navbar-nav" >
-            <li class="{{ Request::is('/') ? "active" : " " }}"><a href="/" style="margin-left: 200px;">Home</a></li>
-            <li class="{{ Request::is('blog') ? "active" : " " }}"><a href="/blog">Blog</a></li>
-            <li class="{{ Request::is('contact') ? "active" : " " }}"><a href="/contact">Contact</a></li>
-            <li class="{{ Request::is('about') ? "active" : " " }}"><a href="/about">About</a></li>
+            <li class="{{ Request::is('/') ? "active" : " " }}"><a href="/" style="margin-left: 200px;">Welcome </a></li>
+            <li class="{{ Request::is('blog') ? "active" : " " }}"><a href="/blog">Read Blog</a></li>
+            {{-- <li class="{{ Request::is('contact') ? "active" : " " }}"><a href="/contact">Contact</a></li> --}}
+            {{-- <li class="{{ Request::is('about') ? "active" : " " }}"><a href="/about">About</a></li> --}}
           </ul>
           
           <ul class="nav navbar-nav navbar-right">
@@ -35,9 +35,11 @@
                   <li><a href="{{ route('logout') }}">Logout</a></li>
                 </ul>
               </li>
-
             @else
-                <a href="{{ route('login') }}" class="btn btn-default " style="margin:8px 5px;">Login</a><br>
+              <div>
+                <a href="{{ route('login') }}" class="btn btn-primary " style="margin:8px 5px;">Login</a> <a href="{{ route('register') }}" class="btn btn-default">Register</a>
+              
+              </div>
             @endif
 
           </ul>

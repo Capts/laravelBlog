@@ -6,7 +6,6 @@
 
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
-			<div class=""></div>
 				<div class="panel panel-default">
 					<div class="panel-heading">Reset password</div>
 
@@ -28,8 +27,8 @@
 
 						{!! Form::close() !!}
 					</div>
-				</div> 
-			</div>	
+				</div> {{-- end of panel default --}}
+		</div>	
 	</div>{{-- End of Row --}}
 
 
