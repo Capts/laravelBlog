@@ -21,7 +21,7 @@
 							{{ Form::label('email', 'Email Address: ') }}
 							{{ Form::email('email', null, ['class' => 'form-control']) }}
 
-							{{ Form::submit('Reset password', ['class' => 'btn btn-primary']) }}
+							{{ Form::submit('Reset password', ['class' => 'btn btn-primary btn-h1-spacing']) }}
 
 						{!! Form::close() !!}
 					</div>

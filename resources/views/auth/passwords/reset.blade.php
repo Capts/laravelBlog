@@ -23,7 +23,7 @@
 							{{ Form::label('password_confirmation', 'Confirm new password ') }}
 							{{ Form::password('password_confirmation', ['class' => 'form-control']) }}
 
-							{{ Form::submit('Reset password', ['class' => 'btn btn-primary']) }}
+							{{ Form::submit('Reset password now', ['class' => 'btn btn-primary btn-h1-spacing']) }}
 
 						{!! Form::close() !!}
 					</div>

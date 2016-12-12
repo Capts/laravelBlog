@@ -11,8 +11,9 @@ use App\Post;
 class BlogController extends Controller
 {
     public function getIndex(){
-    	$posts = Post::paginate(4);
+    	$posts = Post::orderBy('id','desc')->paginate(10);
     	return view('blog.index')->withPosts($posts);
+
     }
     public function getSingle($slug){
     	// fetch from db based on slug
@@ -22,5 +23,5 @@ class BlogController extends Controller
     	return view('blog.single')->withPost($post);
     }
 
-
+   
 }

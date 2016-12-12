@@ -22,16 +22,15 @@
 										<tr>
 											<th>Title</th>
 											<th>Body</th>
-											<th>Views</th>
 											<th>Published</th>
 
 										</tr>
 									</thead>
 									@foreach ($posts as $post)
 										<tbody style="font-size: 16px;">
-											<td><a href="{{ route('blog.single', $post->id) }}" >{{ $post->title}}</a></td>
-											<td>{{ substr($post->body, 0, 80) }}{{ strlen($post->body) > 80 ? '...' : "" }}</td>
-											<td>views here</td>
+											<td><a href="{{ route('blog.single', $post->slug) }}" >{{ $post->title}}</a></td>
+											<td>{{ substr($post->body, 0, 100) }}{{ strlen($post->body) > 100 ? '...' : "" }}</td>
+											
 											<td>{{ date('M j, Y', strtotime($post->created_at)) }}</td>
 										</tbody>
 									@endforeach

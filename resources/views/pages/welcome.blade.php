@@ -4,17 +4,7 @@
 
 @section('content')
       <div class="row">
-        {{-- <div class="col-md-12"> --}}
-          <div class="jumbotron">
-            <h1>Welcome chief !</h1>
-            <p class="lead">Make something different.</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Popular post</a></p>
-          </div>
-        {{-- </div> --}}
-      </div><!-- end of row -->
-      
-      <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-8" style="border:2px solid red;">
           <h2>Latest posts</h2>
           <hr width="100%">
           @foreach($posts as $post)
@@ -26,20 +16,12 @@
 
             <hr>
           @endforeach
+
       </div>
          
-        <div class="col-md-3 col-md-offset-1">
+        <div class="col-md-3 col-md-offset-1" style="border:2px solid green;">
           <h2>Sidebar</h2>
         </div>
       </div>
-      
-      <nav aria-label="ASLFKALSJFLASK">
-        <ul class="pager">
-          <li><a href="#">Previous</a></li>
-          <li><a href="#">Next</a></li>
-        </ul>
-      </nav>
-      
-
 
 @endsection

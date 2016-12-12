@@ -5,12 +5,12 @@
   @include('partials._head')
 </head> 
 
-<body>
+<body style="background-color: #F6F7F2;">
 
   @include('partials._nav')
     
     <div class="container">
-      <br>
+     
     	@include('partials._messages')
 
     	@yield('content')
@@ -20,5 +20,5 @@
 
       @include('partials._javascript')
       @include('partials._bootstrapscript')
- </body>
+</body>
 </html>
