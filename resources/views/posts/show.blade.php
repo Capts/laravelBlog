@@ -6,11 +6,12 @@
 
 	<div class="row">
 		<div class="col-md-8">
+		<div class="well">
 			<h2> {{ $post->title }} </h2>
 			<small>{{ 'Created at' }} {{ date('M j, Y h:ia', strtotime($post->created_at)) }}</small>
 
 			<hr width="100%">
-			<p class="lead">{{ $post->body }}</p>
+			<p style="font-size: 19px;line-height: 28px;">{{ $post->body }}</p></div>
 		</div>
 		<div class="col-md-4">
 			<div class="well">
@@ -45,7 +46,7 @@
 				</div>
 
 				<div class="row">
-					<div class="col-md-12">
+					<div class="col-md-12" >
 						{{ Html::linkRoute('posts.index', 'See all posts', [], ['class' => 'btn btn-default btn-block btn-h1-spacing' ]) }}
 					</div>
 				</div>

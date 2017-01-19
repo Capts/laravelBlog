@@ -5,7 +5,7 @@
   @include('partials._head')
 </head> 
 
-<body style="background-color: #34495e;color:#262626;font-family:'Raleway', sans-serif;"">
+<body style="background-color: #34495e;color:#262626;font-family:'Raleway', sans-serif;">
 
   @include('partials._nav')
     
@@ -13,11 +13,8 @@
      
     	@include('partials._messages')
 
-      <div class="col-md-8 col-md-offset-2">
-        	@yield('content')
-      </div> 
+        @yield('content')
         
-
     </div><!-- end of contaienr -->
       
 

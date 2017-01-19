@@ -3,23 +3,23 @@
 @section('title', ' | About')
 
 @section('content')
-      <div class="row">
+      <div class="row" style="color:white;">
         <div class="col-md-6">
           
             <div class="summary">
               
-              <h1 class="summary-heading text-left">Who Am I<br><small>few things about me</small></h1>
+              <h1 class="summary-heading text-left" >Who Am I<br><small>few things about me</small></h1>
               <img class="summary-image img-circle img-thumbnail img-responsive pull-left" src="/img/profile/me.jpg" height="220px" width="220px" style="margin-right:20px;"></img>
                <br>
               
               <div class="jumbotron">
                 <span class="text-muted">Kevin Broncano<br><small>kevin.572.94@gmail.com</small></span><br><br>
-                <p class="lead" style="padding-50px;">
+                <p class="lead" style="padding-50px;color:#000;"><b>
                   I'm Kevin, digital artist and designer, amateur in web development and software design. 
                   I want to learn more about web development so if you have a nice and good suggestion, bump me in!
                   I am a graduating student in the University of the Cordilleras located at Baguio City, Benguet, Philippines.
                   I like to design websites and more like on the frontend. I also finished two years technical-vocational course related on 
-                  Hardware Servicing. 
+                  Hardware Servicing. </b>
                 </p>
               </div> <!-- jumbo -->
 

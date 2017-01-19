@@ -4,21 +4,16 @@
 
 @section('content')
 
-	<div class="row">
+	<div class="row" >
 		<div class="col-md-12">
-			<h1>Blog</h1>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-md-12">
-			<div class="panel panel-default">
-
+			<div class="well">
+				<h2 class="text-center" style="font-size:17px;font-family: 'Raleway', sans-serif;font-size: 26px;">ALL BLOG POSTS</h2>
+  				<hr width="50%">
 					<div class="row">
-						<div class="col-md-10 col-md-offset-1">
+						<div class="col-md-10 col-md-offset-1" >
 							<div class="table-responsive">
-								<table class="table table-hover">
-									<thead style="font-size:16px;">
+								<table class="table">
+									<thead style="font-size:16px;color:#000;">
 										<tr>
 											<th>Title</th>
 											<th>Body</th>
@@ -27,7 +22,7 @@
 										</tr>
 									</thead>
 									@foreach ($posts as $post)
-										<tbody style="font-size: 16px;">
+										<tbody style="font-size: 16px;color:#000;">
 											<td><a href="{{ route('blog.single', $post->slug) }}" >{{ $post->title}}</a></td>
 											<td>{{ substr($post->body, 0, 100) }}{{ strlen($post->body) > 100 ? '...' : "" }}</td>
 											
