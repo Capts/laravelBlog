@@ -17,8 +17,14 @@
 					<div class="caption">
 						<h3>{{ $post->title }}  <small><h6>Published: {{ date('M j,Y', strtotime($post->created_at)) }} | Edited: {{ date('M j, Y', strtotime($post->updated_at)) }}</h6></small></h3>
 						<p>{{ substr($post->body,0, 100) }} {{ strlen($post->body) > 100 ? "..." : '' }}</p>
-						<a href="{{ route('posts.show', $post->id)}}" class="btn btn-primary btn-md">view</a>
-						<a href="{{ route('posts.edit', $post->id)}}" class="btn btn-default btn-md">edit</a>
+						<a href="{{ route('posts.show', $post->id)}}" class="btn btn-primary btn-xs"> view &nbsp; <i class="fa fa-circle"></i></a>
+						<a href="{{ route('posts.edit', $post->id)}}" class="btn btn-warning btn-xs"> edit &nbsp; <i class="fa fa-edit"></i></a><br><br />
+						{!! Form::open(['route'=> ['posts.destroy', $post->id], 'method' => 'DELETE']) !!}
+
+						{!! Form::submit('Delete', ["class" => 'btn btn-danger btn-xs']) !!}
+
+						{!! Form::close() !!}
+						{{-- <a href="{{ route('posts.destroy', $post->id)}}" class="btn btn-danger btn-xs">remove post &nbsp; <i class="fa fa-remove"></i></a> --}}
 						
 					</div>
 

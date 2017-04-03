@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
 <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
 <link rel="stylesheet" href="css/bootstrap/bootstrap.min.js">
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
 
 
 {{ Html::style('css/styles.css')}}

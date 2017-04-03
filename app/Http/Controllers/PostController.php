@@ -49,12 +49,12 @@ class PostController extends Controller
      public function store(Request $request)
     {
         //validate the data
-        $this->validate($request, array(
-                'title'         => 'required|max:255',
-                'slug'          => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
-                'category_id'   => 'required|integer',
-                'body'          => 'required'
-            ));
+        // $this->validate($request, array(
+        //         'title'         => 'required|max:255',
+        //         'slug'          => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
+        //         'category_id'   => 'required|integer',
+        //         'body'          => 'required'
+        //     ));
 
         //store in DB
         $post = new Post;
