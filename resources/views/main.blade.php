@@ -5,7 +5,7 @@
   @include('partials._head')
 </head> 
 
-<body style="background-color: #34495e;color:#262626;font-family:'Raleway', sans-serif;"">
+<body style="background-color: #34495e;color:#262626;font-family:'Raleway', sans-serif;">
 
   @include('partials._nav')
     
