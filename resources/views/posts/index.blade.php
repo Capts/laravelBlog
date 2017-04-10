@@ -5,7 +5,7 @@
 @section('content')
 
 		<div class="col-md-12" style="padding:10px 20px;">
-			<a href="{{ route('posts.create') }}" class="btn btn-md  btn-success pull-right">Create New Post</a>
+			{{-- <a href="{{ route('posts.create') }}" class="btn btn-md  btn-success pull-right">Create New Post</a> --}}
 			
 		</div>
 		

@@ -11,8 +11,14 @@ use App\Post;
 class BlogController extends Controller
 {
     public function getIndex(){
-    	$posts = Post::orderBy('id','desc')->paginate(10);
-    	return view('blog.index')->withPosts($posts);
+    	// $posts = Post::orderBy('id','desc')->paginate(10);
+    	// return view('blog.index')->withPosts($posts);
+
+        $search = \Request::get('search');
+        $posts = Post::where('title', 'like','%'.$search.'%')->orderBy('id', 'desc')->paginate(3);
+
+
+        return view('blog.index')->withPosts($posts);
 
     }
     public function getSingle($slug){
